@@ -12,20 +12,17 @@ public class Task_11_143 {
 	public static void main(String[] args) {
 		/* 11.143 */
 		int mass[] = new int[10];
+		int max = 0;
 		for (int i = 0; i < mass.length; i++) {
 			mass[i] = (int) (Math.random() * 50) - 25;
 			if (mass[i] < 0) {
 				mass[i] = Math.abs(mass[i]);
+				if (mass[i] > max) {
+					max = mass[i];
+				} 
 			}
 		}
 		System.out.println(Arrays.toString(mass));
-		// Arrays.sort(mass);
-		int max = 0;
-		for (int i = 0; i < mass.length - 1; i++) {
-			if (mass[i] > max) {
-				max = mass[i];
-			} 
-		}
 		System.out.println("максимальный элемент массива = " + max);
 	}
 
