@@ -27,6 +27,7 @@ public class Task_6_22 {
 				"Цифра " + nomer + " встречается в числе " + number + " , "
 		+ findNumber(nomer, number) + " раз(а)");
 		
+		
 		scanner.close();
 	}
 }
