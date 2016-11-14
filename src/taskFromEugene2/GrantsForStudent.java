@@ -16,7 +16,14 @@ package taskFromEugene2;
 public class GrantsForStudent {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		Student student1 = new Student("pupkin", "vasya", "petrovich", 125, new int[] { 5, 3, 2, 4, 5 });
+		Student student2 = new Student("pechkin", "vova", "vladimirovich", 113, new int[] { 4, 5, 2, 3, 2 });
+		Student student3 = new Student("hrush", "petya", "ozimovich", 113, new int[] { 2, 3, 5, 3, 4 });
+		Student student4 = new Student("vermishel", "milena", "anatolievna", 125, new int[] { 5, 5, 2, 3, 4 });
+		Student student5 = new Student("sergeev", "sergey", "sergeevich", 125, new int[] { 3, 3, 4, 5, 4 });
+		
+		
 
 	}
 
