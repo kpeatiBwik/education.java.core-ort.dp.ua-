@@ -7,7 +7,7 @@ public class Student {
 	private String patronymic;
 	private int groupNumber;
 	private int[] studentMarks = new int[5];
-	private int result;
+	private String result;
 	private int result2;
 	private int result3;
 	private int result4;
@@ -61,15 +61,20 @@ public class Student {
 		this.studentMarks = studentsMarks;
 	}
 
-	public int getResult() {
+	public String getResult() {
 		return result;
 	}
 
-	public void setResult(int result) {
+	public void setResult(String result) {
 		this.result = result;
 	}
 
-	public int result(int[] result) {
+	public String result1(int x) {
+
+		return name;
+	}
+
+	public String result(int[] result) {
 		for (int i = 0; i < result.length; i++) {
 			if (result[i] == 5) {
 				this.result5++;
@@ -80,16 +85,15 @@ public class Student {
 			} else if (result[i] == 2) {
 				this.result2++;
 			}
-			if (this.result2 >= 2) {
-				return this.result = -1;
-			} else if (result5 == result.length) {
-				this.result = 100;
-			} else if (result5 > result3 && result5 > result2 || result4 > result2 && result4 > result3) {
-				this.result = 50;
-			} else if (result4 == result.length) {
-				this.result = 25;
-			}
-
+		}
+		if (result4 == result.length) {
+			this.result = "с надбавкой 25 %";
+		} else if (result5 == result.length) {
+			this.result = "с надбавкой 100 %";
+		} else if (result2 == 0 && result3 == 0) {
+			this.result = "с надбавкой 50 %";
+		} else {
+			return this.result = "не получает стипендию";
 		}
 		return this.result;
 	}

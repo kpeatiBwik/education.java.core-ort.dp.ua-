@@ -17,11 +17,11 @@ public class GrantsForStudent {
 
 	public static void main(String[] args) {
 
-		Student student1 = new Student("pupkin", "vasya", "petrovich", 125, new int[] { 5, 3, 2, 4, 5 });
-		Student student2 = new Student("pechkin", "vova", "vladimirovich", 113, new int[] { 3, 5, 5, 5, 5 });
-		Student student3 = new Student("hrush", "petya", "ozimovich", 113, new int[] { 2, 2, 2, 2, 2 });
-		Student student4 = new Student("vermishel", "milena", "anatolievna", 125, new int[] { 4, 3, 4, 4, 4 });
-		Student student5 = new Student("sergeev", "sergey", "sergeevich", 125, new int[] { 5, 4, 2, 5, 5 });
+		Student student1 = new Student("пупкин", "vasya", "petrovich", 125, new int[] { 4, 4, 4, 4, 4 });
+		Student student2 = new Student("печкин", "vova", "vladimirovich", 113, new int[] { 4, 5, 4, 3, 4 });
+		Student student3 = new Student("хрущь", "petya", "ozimovich", 113, new int[] { 2, 2, 2, 2, 2 });
+		Student student4 = new Student("вермишель", "milena", "anatolievna", 125, new int[] { 5, 5, 5, 5, 5 });
+		Student student5 = new Student("сергеев", "sergey", "sergeevich", 125, new int[] { 5, 5, 5, 4, 4 });
 
 		Student[] students = { student1, student2, student3, student4, student5 };
 		System.out.println("Фимилия, имя, отчество, номер группы, стипендия");
@@ -34,8 +34,8 @@ public class GrantsForStudent {
 		for (int i = 0; i < students.length; ++i) {
 			Student student = students[i];
 			String studentInString = studentsToString(student);
-			int res = students[i].result(student.getStudentMarks());
-			System.out.printf("%s%n", studentInString + res + " %");
+			String res = students[i].result(student.getStudentMarks());
+			System.out.printf("%s%n", studentInString + res);
 		}
 
 	}
