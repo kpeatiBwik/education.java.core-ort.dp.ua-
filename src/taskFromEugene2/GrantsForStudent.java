@@ -34,7 +34,7 @@ public class GrantsForStudent {
 		for (int i = 0; i < students.length; ++i) {
 			Student student = students[i];
 			String studentInString = studentsToString(student);
-			String res = students[i].result(student.getStudentMarks());
+			String res = result(student.getStudentMarks());
 			System.out.printf("%s%n", studentInString + res);
 		}
 
@@ -58,5 +58,34 @@ public class GrantsForStudent {
 		sb.append(student.getSurname()).append(" ").append(student.getName()).append(" ")
 				.append(student.getPatronymic()).append(" ").append(student.getGroupNumber()).append(" - ");
 		return sb.toString();
+	}
+
+	private static String result(int[] result) {
+		String finalResult = "";
+		int result2 = 0;
+		int result3 = 0;
+		int result4 = 0;
+		int result5 = 0;
+		for (int i = 0; i < result.length; i++) {
+			if (result[i] == 5) {
+				result5++;
+			} else if (result[i] == 4) {
+				result4++;
+			} else if (result[i] == 3) {
+				result3++;
+			} else if (result[i] == 2) {
+				result2++;
+			}
+		}
+		if (result4 == result.length) {
+			finalResult = "с надбавкой 25 %";
+		} else if (result5 == result.length) {
+			finalResult = "с надбавкой 100 %";
+		} else if (result2 == 0 && result3 == 0) {
+			finalResult = "с надбавкой 50 %";
+		} else {
+			return finalResult = "не получает стипендию";
+		}
+		return finalResult;
 	}
 }
