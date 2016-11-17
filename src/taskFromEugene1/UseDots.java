@@ -24,7 +24,7 @@ public class UseDots {
 			dotsDistance[i] = (int) Math.sqrt(dots[i].getX() * dots[i].getX() + dots[i].getY() * dots[i].getY());
 		}
 		bubbleSortForDots(dotsDistance, dots);
-		printEmployees(dots);
+		printDots(dots);
 	}
 
 	private static void bubbleSortForDots(double[] dotsDistance, Dots dots[]) {
@@ -50,7 +50,7 @@ public class UseDots {
 		return sb.toString();
 	}
 	
-	private static void printEmployees(Dots[] dots) {
+	private static void printDots(Dots[] dots) {
 		for(int i = 0; i < dots.length; ++i) {
 			Dots dotsResult = dots[i];
 			String dotsInString = dotsToString(dotsResult);
