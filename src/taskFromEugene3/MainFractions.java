@@ -13,7 +13,7 @@ public class MainFractions {
 			System.out.println("Введите первый операнд:");
 			fractions.setFirstOperand(s.nextLong());
 			System.out.println("Введите второй операнд:");
-			fractions.setSecondOperand(s.nextShort());
+			fractions.setSecondOperand((short)Math.abs(s.nextShort()));
 			arrayOperands[i] = universalOperand(fractions.getFirstOperand(), fractions.getSecondOperand());
 			System.out.println(arrayOperands[i]); // Проверка
 		}
@@ -30,9 +30,6 @@ public class MainFractions {
 		int lenghtSecondOperand = s.length();
 		double result = 0;
 		if (firstOperand < 0 || secondOperand < 0) {
-			result = (double) firstOperand - (double) secondOperand / Math.pow(10, lenghtSecondOperand);
-			return result;
-		} else if (firstOperand < 0 && secondOperand < 0) {
 			result = (double) firstOperand - (double) secondOperand / Math.pow(10, lenghtSecondOperand);
 			return result;
 		} else {
