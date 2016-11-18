@@ -12,22 +12,27 @@ import java.util.Arrays;
  * так что думаю простительно*/
 public class Task_11_36 {
 
+
 	static int[] createArray(int lenght) {
 		int mass[] = new int[lenght];
 		for (int i = 0; i < mass.length; i++) {
 			mass[i] = (int) (Math.random() * 200) - 75;
 		}
-		System.out.println(Arrays.toString(mass)); //Проверка
+		System.out.println(Arrays.toString(mass)); // Проверка
+
+		return mass;
+	}
+
+	static int printArray(int mass[]) {
 		for (int i = 0; i < mass.length; i++) {
 			if (mass[i] >= 0 && mass[i] <= 100) {
 				System.out.println(mass[i]);
 			}
 		}
-		return mass;
+		return 0;
 	}
 
 	public static void main(String[] args) {
-		createArray(15);
-
+		printArray(createArray(15));
 	}
 }
