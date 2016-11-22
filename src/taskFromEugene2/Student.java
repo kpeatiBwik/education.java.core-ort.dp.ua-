@@ -56,8 +56,4 @@ public class Student {
 		this.studentMarks = studentsMarks;
 	}
 
-	public String result1(int x) {
-
-		return name;
-	}
 }

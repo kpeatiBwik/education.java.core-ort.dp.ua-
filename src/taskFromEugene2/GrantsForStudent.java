@@ -34,7 +34,7 @@ public class GrantsForStudent {
 		for (int i = 0; i < students.length; ++i) {
 			Student student = students[i];
 			String studentInString = studentsToString(student);
-			String res = result(student.getStudentMarks());
+			String res = increasedScholarships(student.getStudentMarks());
 			System.out.printf("%s%n", studentInString + res);
 		}
 
@@ -60,7 +60,15 @@ public class GrantsForStudent {
 		return sb.toString();
 	}
 
-	private static String result(int[] result) {
+	/**
+	 * Этот метод начисляет стипендию студентам по результатам экзаменационной
+	 * сессии
+	 * 
+	 * @param оценки
+	 *            студента по результатам сессии
+	 * @return надбавка к стипендии
+	 */
+	private static String increasedScholarships(int[] result) {
 		String finalResult = "";
 		int result2 = 0;
 		int result3 = 0;
