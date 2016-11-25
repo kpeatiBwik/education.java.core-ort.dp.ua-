@@ -1,4 +1,4 @@
-package taskFromEugene3.test;
+package taskFromEugene3_test;
 
 import java.util.Scanner;
 
