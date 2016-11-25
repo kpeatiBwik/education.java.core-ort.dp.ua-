@@ -1,4 +1,4 @@
-package taskFromEugene3;
+package taskFromEugene3.test;
 
 /*3.
 Класс Дробное число со знаком (Fractions). Число должно быть представлено двумя полями: 
