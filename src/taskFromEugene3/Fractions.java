@@ -1,4 +1,4 @@
-package taskFromEugene3_test;
+package taskFromEugene3;
 
 /*3.
 Класс Дробное число со знаком (Fractions). Число должно быть представлено двумя полями: 
@@ -12,6 +12,15 @@ public class Fractions {
 	private long firstOperand;
 	private short secondOperand;
 
+	public Fractions() {
+
+	}
+	
+	public Fractions(long firstOperand, short secondOperand) {
+		setFirstOperand(firstOperand);
+		setSecondOperand(secondOperand);
+	}
+	
 	public long getFirstOperand() {
 		return firstOperand;
 	}
@@ -27,39 +36,11 @@ public class Fractions {
 	public void setSecondOperand(short secondOperand) {
 		this.secondOperand = secondOperand;
 	}
+	
 
-	public double addition(double x, double y) {
-		double result = x + y;
-		return result;
-	}
-
-	public double subtraction(double x, double y) {
-		double result = x - y;
-		return result;
-	}
-
-	public double multiplication(double x, double y) {
-		double result = x * y;
-		return result;
-	}
-
-	public double division(double x, double y) {
-		double result = x / y;
-		return result;
-	}
-
-	public String comparison(double x, double y) {
-		String s = null;
-		if (x > y) {
-			s = "Первый операнд больше второго";
-			return s;
-		} else if (x < y) {
-			s = "Второй операнд больше первого";
-			return s;
-		} else {
-			s = "Операнды равны";
-		}
-		return s;
+	
+	public void plus (Fractions f1 , Fractions f2){
 
 	}
+
 }
