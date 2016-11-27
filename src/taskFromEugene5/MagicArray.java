@@ -12,7 +12,7 @@ public class MagicArray {
 
 	// Безопасная запись в приватное поле
 	private void setArray(int array[]) {
-		System.arraycopy(array, 0, this.array, 0, array.length);
+		System.arraycopy(array, 0, this.array, 0, this.array.length);
 	}
 
 	// Добавляем элемент в конец массива
