@@ -13,8 +13,8 @@ public class Passport {
 	private String _passportNumber;
 	private String _name;
 	private String _surName;
-	private String _birthday;
-	private String _issuedBy;
+	private LocalDate _birthday;
 	private String _city;
+	private String _issuedBy;
 	private LocalDate _dateOfIssue;
 }
