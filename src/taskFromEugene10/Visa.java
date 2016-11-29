@@ -8,12 +8,16 @@ public class Visa {
 	private LocalDate _startDate;
 	private LocalDate _endDate;
 
-	public Visa(VisaType visaType, LocalDate _startDate, Integer fIVE_YEARS) {
+	public Visa(VisaType visaType, LocalDate _startDate, Integer FIVE_YEARS) {
 		super();
 		set_visaType(visaType);
 		set_startDate(_startDate);
-		set_endDate(0);
+		set_endDate(FIVE_YEARS);
 	}
+
+	public Visa() {
+
+	};
 
 	public VisaType get_visaType() {
 		return _visaType;
@@ -31,12 +35,12 @@ public class Visa {
 		this._startDate = _startDate;
 	}
 
-	public LocalDate get_endtDate() {
+	public LocalDate get_endDate() {
 		return _endDate;
 	}
 
 	public void set_endDate(int visaType) {
-		this._endDate = this._startDate.plusYears(visaType);
+		this._endDate = get_startDate().plusYears(visaType);
 	}
 
 }

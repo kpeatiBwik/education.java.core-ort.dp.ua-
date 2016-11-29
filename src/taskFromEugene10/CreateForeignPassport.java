@@ -29,7 +29,8 @@ public class CreateForeignPassport {
 
 	private static String foreignPassportsToString(ForeignPassport foreignPassport) {
 		StringBuilder sb = new StringBuilder();
-		sb.append(foreignPassport.get_name()).append(" ").append(foreignPassport.get_visa()).append("\n");
+		sb.append(foreignPassport.get_name()).append(" ").append(foreignPassport.get_visa().get_startDate()).append(" ")
+				.append(foreignPassport.get_visa().get_endDate()).append("\n");
 		return sb.toString();
 	}
 
