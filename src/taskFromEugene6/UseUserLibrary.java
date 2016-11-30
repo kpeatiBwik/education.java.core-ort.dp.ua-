@@ -4,10 +4,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UseUserLibrary {
+
 	private static ArrayList<UserLibrary> userLibraryList = new ArrayList<UserLibrary>();
+	private static ArrayList<String> Faculty = new ArrayList<String>();
 	private static Scanner s = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		Faculty.add("PHYSICS");
+		Faculty.add("CHEMISTRY");
+		Faculty.add("HISTORY");
+		Faculty.add("MATHS");
 		while (true) {
 			menu();
 		}
@@ -22,34 +28,13 @@ public class UseUserLibrary {
 		String patronymic = s.nextLine();
 		System.out.println("Введите номер читательского билета пользователя библиотеки: ");
 		String ticketNumber = s.nextLine();
-		System.out.println("Выберите факультет пользователя библиотеки: ");
-		System.out.println("1. Факультет физики");
-		System.out.println("2. Факультет химии");
-		System.out.println("3. Факультет истории");
-		System.out.println("4. Факультет математики");
-		String faculty = s.nextLine();
-		Faculty resultFaculty;
-		switch (faculty) {
-		case "1":
-			resultFaculty = Faculty.PHYSICS;
-			break;
-		case "2":
-			resultFaculty = Faculty.CHEMISTRY;
-			break;
-		case "3":
-			resultFaculty = Faculty.HISTORY;
-			break;
-		case "4":
-			resultFaculty = Faculty.MATHS;
-			break;
-		default:
-			resultFaculty = Faculty.PHYSICS; // чтобы компилятор не ругался :)
-			break;
-		}
 		System.out.println("Введите дату рождения пользователя библиотеки в формате DD.MM.YYYY: ");
 		String birthday = s.nextLine();
 		System.out.println("Введите номер телефона пользователя библиотеки: ");
 		long phoneNumber = s.nextLong();
+		printFaculty();
+		int facultyNumber = s.nextInt();
+		String resultFaculty = Faculty.get(facultyNumber - 1);
 
 		UserLibrary newUser = new UserLibrary(name, surname, patronymic, ticketNumber, resultFaculty, birthday,
 				phoneNumber);
@@ -104,34 +89,18 @@ public class UseUserLibrary {
 				} else {
 					System.out.println("Пользователь с такой фамилией не найден");
 				}
-				break;
+				return;
 			case "2":
-				System.out.println("Выбери факультет:");
-				int i = 1;
-				for (Faculty faculty : Faculty.values()) {
-					System.out.println(i + ". " + faculty);
-					i++;
-				}
+				printFaculty();
 				int chooseFaculty = s.nextInt();
-				switch (chooseFaculty) {
-				case 1:
-					resultFind = findUserLibrary(Faculty.PHYSICS.toString(), 2);
-					break;
-				case 2:
-					resultFind = findUserLibrary(Faculty.CHEMISTRY.toString(), 2);
-					break;
-				case 3:
-					resultFind = findUserLibrary(Faculty.HISTORY.toString(), 2);
-					break;
-				case 4:
-					resultFind = findUserLibrary(Faculty.MATHS.toString(), 2);
-					break;
-				}
+				String resultFaculty = Faculty.get(chooseFaculty - 1);
+				resultFind = findUserLibrary(resultFaculty, 2);
 				if (resultFind != null) {
 					printUsersLibrary(resultFind);
 				} else {
 					System.out.println("В этом факультете нету пользователей");
 				}
+				return;
 			case "3":
 				return;
 			case "4":
@@ -172,5 +141,14 @@ public class UseUserLibrary {
 	private static void exit() {
 		System.out.println("Всего доброго!");
 		System.exit(0);
+	}
+
+	private static void printFaculty() {
+		System.out.println("Выберите факультет пользователя библиотеки: ");
+		int i = 1;
+		for (String faculty : Faculty) {
+			System.out.println(i + ". " + faculty);
+			i++;
+		}
 	}
 }

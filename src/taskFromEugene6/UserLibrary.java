@@ -14,7 +14,7 @@ public class UserLibrary {
 	private String _surname;
 	private String _patronymic;
 	private String _ticketNumber;
-	private Faculty _faculty;
+	private String _faculty;
 	private String _birthday;
 	private long _phoneNumber;
 
@@ -22,7 +22,7 @@ public class UserLibrary {
 
 	}
 
-	public UserLibrary(String _name, String _surname, String _patronymic, String _ticketNumber, Faculty faculty,
+	public UserLibrary(String _name, String _surname, String _patronymic, String _ticketNumber, String faculty,
 			String _birthday, Long _phoneNumber) {
 		setName(_name);
 		setSurname(_surname);
@@ -65,11 +65,11 @@ public class UserLibrary {
 		this._ticketNumber = _ticketNumber;
 	}
 
-	public Faculty getFaculty() {
+	public String getFaculty() {
 		return _faculty;
 	}
 
-	public void setFaculty(Faculty faculty) {
+	public void setFaculty(String faculty) {
 		this._faculty = faculty;
 	}
 
