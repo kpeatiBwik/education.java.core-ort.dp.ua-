@@ -17,7 +17,9 @@ public class UserLibrary {
 	private String _faculty;
 	private String _birthday;
 	private long _phoneNumber;
-
+	private final long DEFAULT_PHONE_NUMBER = 777777;
+	
+	
 	public UserLibrary() {
 
 	}

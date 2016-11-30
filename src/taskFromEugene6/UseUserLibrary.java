@@ -108,6 +108,7 @@ public class UseUserLibrary {
 				break;
 
 			default:
+				exit();
 				break;
 			}
 		case "4":
@@ -115,6 +116,7 @@ public class UseUserLibrary {
 			break;
 
 		default:
+			exit();
 			break;
 		}
 	}
