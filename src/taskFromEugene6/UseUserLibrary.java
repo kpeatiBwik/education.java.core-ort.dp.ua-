@@ -66,10 +66,10 @@ public class UseUserLibrary {
 
 	private static String usersLibraryToString(UserLibrary userLibrary) {
 		StringBuilder sb = new StringBuilder();
-		sb.append(userLibrary.get_name()).append(" ").append(userLibrary.get_surname()).append(" ")
-				.append(userLibrary.get_patronymic()).append(" ").append(userLibrary.get_ticketNumber()).append(" ")
-				.append(userLibrary.get_faculty()).append(" ").append(userLibrary.get_birthday()).append(" ")
-				.append(userLibrary.get_phoneNumber()).append("\n");
+		sb.append(userLibrary.getName()).append(" ").append(userLibrary.getSurname()).append(" ")
+				.append(userLibrary.getPatronymic()).append(" ").append(userLibrary.getTicketNumber()).append(" ")
+				.append(userLibrary.getFaculty()).append(" ").append(userLibrary.getBirthday()).append(" ")
+				.append(userLibrary.getPhoneNumber()).append("\n");
 		return sb.toString();
 	}
 
@@ -112,8 +112,8 @@ public class UseUserLibrary {
 					System.out.println(i + ". " + faculty);
 					i++;
 				}
-				int f = s.nextInt();
-				switch (f) {
+				int chooseFaculty = s.nextInt();
+				switch (chooseFaculty) {
 				case 1:
 					resultFind = findUserLibrary(Faculty.PHYSICS.toString(), 2);
 					break;
@@ -136,14 +136,14 @@ public class UseUserLibrary {
 				menu();
 				break;
 			case "4":
-				System.exit(0);
+				exit();
 				break;
 
 			default:
 				break;
 			}
 		case "4":
-			System.exit(0);
+			exit();
 			break;
 
 		default:
@@ -151,22 +151,27 @@ public class UseUserLibrary {
 		}
 	}
 
-	private static ArrayList<UserLibrary> findUserLibrary(String findValue, int field) {
+	private static ArrayList<UserLibrary> findUserLibrary(String findValue, int сhoosingSearchOption) {
 		ArrayList<UserLibrary> userLibraryListNew = new ArrayList<UserLibrary>();
 		for (UserLibrary userLibrary : userLibraryList) {
-			switch (field) {
+			switch (сhoosingSearchOption) {
 			case 1:
-				if (userLibrary.get_surname().toUpperCase().equals(findValue.toUpperCase())) {
+				if (userLibrary.getSurname().toUpperCase().equals(findValue.toUpperCase())) {
 					userLibraryListNew.add(userLibrary);
 				}
 				break;
 			case 2:
-				if (userLibrary.get_faculty().toString().equals(findValue)) {
+				if (userLibrary.getFaculty().toString().equals(findValue)) {
 					userLibraryListNew.add(userLibrary);
 				}
 				break;
 			}
 		}
 		return userLibraryListNew;
+	}
+
+	private static void exit() {
+		System.out.println("Всего доброго!");
+		System.exit(0);
 	}
 }

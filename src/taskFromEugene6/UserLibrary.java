@@ -24,68 +24,68 @@ public class UserLibrary {
 
 	public UserLibrary(String _name, String _surname, String _patronymic, String _ticketNumber, Faculty faculty,
 			String _birthday, Long _phoneNumber) {
-		set_name(_name);
-		set_surname(_surname);
-		set_patronymic(_patronymic);
-		set_ticketNumber(_ticketNumber);
-		set_faculty(faculty);
-		set_birthday(_birthday);
-		set_phoneNumber(_phoneNumber);
+		setName(_name);
+		setSurname(_surname);
+		setPatronymic(_patronymic);
+		setTicketNumber(_ticketNumber);
+		setFaculty(faculty);
+		setBirthday(_birthday);
+		setPhoneNumber(_phoneNumber);
 	}
 
-	public String get_name() {
+	public String getName() {
 		return _name;
 	}
 
-	public void set_name(String _name) {
+	public void setName(String _name) {
 		this._name = _name;
 	}
 
-	public String get_surname() {
+	public String getSurname() {
 		return _surname;
 	}
 
-	public void set_surname(String _surname) {
+	public void setSurname(String _surname) {
 		this._surname = _surname;
 	}
 
-	public String get_patronymic() {
+	public String getPatronymic() {
 		return _patronymic;
 	}
 
-	public void set_patronymic(String _patronymic) {
+	public void setPatronymic(String _patronymic) {
 		this._patronymic = _patronymic;
 	}
 
-	public String get_ticketNumber() {
+	public String getTicketNumber() {
 		return _ticketNumber;
 	}
 
-	public void set_ticketNumber(String _ticketNumber) {
+	public void setTicketNumber(String _ticketNumber) {
 		this._ticketNumber = _ticketNumber;
 	}
 
-	public Faculty get_faculty() {
+	public Faculty getFaculty() {
 		return _faculty;
 	}
 
-	public void set_faculty(Faculty faculty) {
+	public void setFaculty(Faculty faculty) {
 		this._faculty = faculty;
 	}
 
-	public String get_birthday() {
+	public String getBirthday() {
 		return _birthday;
 	}
 
-	public void set_birthday(String _birthday) {
+	public void setBirthday(String _birthday) {
 		this._birthday = _birthday;
 	}
 
-	public Long get_phoneNumber() {
+	public Long getPhoneNumber() {
 		return _phoneNumber;
 	}
 
-	public void set_phoneNumber(Long _phoneNumber) {
+	public void setPhoneNumber(Long _phoneNumber) {
 		this._phoneNumber = _phoneNumber;
 	}
 
