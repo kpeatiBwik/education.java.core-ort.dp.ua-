@@ -74,7 +74,6 @@ public class UseUserLibrary {
 	}
 
 	private static void menu() {
-		Scanner s = new Scanner(System.in);
 		System.out.println("Выберите пункт меню:");
 		System.out.println("1. Добавить нового пользователя библиотеки");
 		System.out.println("2. Вывести на экран массив пользователей");
