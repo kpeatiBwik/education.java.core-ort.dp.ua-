@@ -133,8 +133,7 @@ public class UseUserLibrary {
 					System.out.println("В этом факультете нету пользователей");
 				}
 			case "3":
-				menu();
-				break;
+				return;
 			case "4":
 				exit();
 				break;
