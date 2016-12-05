@@ -1,13 +1,25 @@
 package taskFromEugene4;
 
+import java.util.ArrayList;
+
 /*4. 
 Создать свой собственный класс строки, базирующийся на массиве 
 символов. Реализовать для него простейшие операции: создание, возврат длины, сложение строк, далее на ваш выбор*/
 
 public class VitahaString {
+
 	protected StringBuilder sb = new StringBuilder();
 
 	private char[] _masschars;
+
+	public VitahaString(char[] masschars) {
+		super();
+		setMasschars(masschars);
+	}
+
+	public VitahaString() {
+
+	}
 
 	public char[] getMasschars() {
 		return _masschars;
@@ -41,4 +53,17 @@ public class VitahaString {
 		return massLenght;
 	}
 
+	/**
+	 * Метод склеивания строк
+	 * 
+	 * @param массив строк
+	 * @return склеенную строку
+	 */
+	public Object stringPlusString(ArrayList<String> string) {
+		for (String string2 : string) {
+			sb.append(string2);
+		}
+		return sb;
+
+	}
 }
