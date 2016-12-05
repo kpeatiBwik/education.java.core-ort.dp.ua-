@@ -4,43 +4,38 @@ import java.time.LocalDate;
 
 public class Visa {
 
-	private VisaType _visaType;
-	private LocalDate _startDate;
+	private String _visaType;
+	private LocalDate _startDate = LocalDate.now();
 	private LocalDate _endDate;
 
-	public Visa(VisaType visaType, LocalDate _startDate, Integer FIVE_YEARS) {
+	public Visa(String visaType, int period) {
 		super();
-		setVisaType(visaType);
-		setStartDate(_startDate);
-		setEndDate(FIVE_YEARS);
+		_visaType = setVisaType(visaType);
+		_endDate = setEndDate(period);
 	}
 
 	public Visa() {
 
 	};
 
-	public VisaType getVisaType() {
+	public String getVisaType() {
 		return _visaType;
 	}
 
-	public void setVisaType(VisaType _visaType) {
-		this._visaType = _visaType;
+	public String setVisaType(String _visaType) {
+		return this._visaType = _visaType;
 	}
 
 	public LocalDate getStartDate() {
 		return _startDate;
 	}
 
-	public void setStartDate(LocalDate _startDate) {
-		this._startDate = _startDate;
-	}
-
 	public LocalDate getEndDate() {
 		return _endDate;
 	}
 
-	public void setEndDate(int visaType) {
-		this._endDate = getStartDate().plusYears(visaType);
+	public LocalDate setEndDate(int period) {
+		return this._endDate = getStartDate().plusYears(period);
 	}
 
 }

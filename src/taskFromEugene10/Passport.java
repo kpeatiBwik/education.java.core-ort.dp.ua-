@@ -32,6 +32,7 @@ public class Passport {
 		setBirthday(year, month, day);
 		setCity(city);
 		setIssuedBy(issuedBy);
+		getDateOfIssue();
 	}
 
 	public String getPassportSerie() {
@@ -92,10 +93,6 @@ public class Passport {
 
 	public LocalDate getDateOfIssue() {
 		return _dateOfIssue;
-	}
-
-	public void set_dateOfIssue() {
-		this._dateOfIssue = LocalDate.now();
 	}
 
 }
