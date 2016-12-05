@@ -10,26 +10,15 @@ public class Task_11_143 {
 	public static void main(String[] args) {
 		/* 11.143 */
 		int mass[] = new int[10];
-		int max = 0;
 		for (int i = 0; i < mass.length; i++) {
 			mass[i] = (int) (Math.random() * 50) - 25;
 		}
-		System.out.println(Arrays.toString(mass));
-		for (int i = 0; i < mass.length; i++) {
-			if (mass[i] < 0) {
-				if (Math.abs(mass[i]) > max) {
-					max = Math.abs(mass[i]);
-					mass[i] = max;
-				}
-			} else {
-				if (mass[i] > max) {
-					max = mass[i];
-					mass[i] = max * (-1);
-				}
-			}
+		Arrays.sort(mass);
+		if (Math.abs(mass[0]) > mass[mass.length - 1]) {
+			mass[0] *= -1;
+		} else {
+			mass[mass.length - 1] *= -1;
 		}
-		System.out.println(Arrays.toString(mass));
-		System.out.println("максимальный элемент массива = " + max);
 	}
 
 }
