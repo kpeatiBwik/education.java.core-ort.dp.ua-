@@ -10,37 +10,37 @@ public class Visa {
 
 	public Visa(VisaType visaType, LocalDate _startDate, Integer FIVE_YEARS) {
 		super();
-		set_visaType(visaType);
-		set_startDate(_startDate);
-		set_endDate(FIVE_YEARS);
+		setVisaType(visaType);
+		setStartDate(_startDate);
+		setEndDate(FIVE_YEARS);
 	}
 
 	public Visa() {
 
 	};
 
-	public VisaType get_visaType() {
+	public VisaType getVisaType() {
 		return _visaType;
 	}
 
-	public void set_visaType(VisaType _visaType) {
+	public void setVisaType(VisaType _visaType) {
 		this._visaType = _visaType;
 	}
 
-	public LocalDate get_startDate() {
+	public LocalDate getStartDate() {
 		return _startDate;
 	}
 
-	public void set_startDate(LocalDate _startDate) {
+	public void setStartDate(LocalDate _startDate) {
 		this._startDate = _startDate;
 	}
 
-	public LocalDate get_endDate() {
+	public LocalDate getEndDate() {
 		return _endDate;
 	}
 
-	public void set_endDate(int visaType) {
-		this._endDate = get_startDate().plusYears(visaType);
+	public void setEndDate(int visaType) {
+		this._endDate = getStartDate().plusYears(visaType);
 	}
 
 }

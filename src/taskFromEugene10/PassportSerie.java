@@ -1,7 +1,9 @@
 package taskFromEugene10;
 
-public enum PassportSerie {
-
-	AE, AH, EE
-
+public interface PassportSerie {
+	
+	final String AE = "AE";
+	final String AH = "AH";
+	final String EE = "EE";
+	
 }

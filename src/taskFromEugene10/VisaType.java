@@ -1,7 +1,10 @@
 package taskFromEugene10;
 
-public enum VisaType {
+public interface VisaType {
 
-	five_years, ten_years, twenties
+	final String TOURIST_VISA = "touristVisa";
+	final String WORK_VISA = "workVisa";
+	final String STUDENT_VISA = "studentVisa";
+
 
 }
