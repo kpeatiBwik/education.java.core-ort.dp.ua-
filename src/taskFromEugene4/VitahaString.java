@@ -8,4 +8,20 @@ public class VitahaString {
 
 	private char[] _masschars;
 
+	public VitahaString() {
+
+	}
+
+	public VitahaString(char[] masschars) {
+		_masschars = masschars;
+	}
+
+	public char[] getMasschars() {
+		return _masschars;
+	}
+
+	public void setMasschars(char[] masschars) {
+		_masschars = masschars;
+	}
+
 }
