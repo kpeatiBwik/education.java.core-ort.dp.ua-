@@ -8,10 +8,10 @@ public class CreateForeignPassport {
 
 	public static void main(String[] args) {
 
-		ForeignPassport foreignPassport1 = new ForeignPassport(Constants.AE, 123, "xxx", "yyy", 1991, 10, 10, "Dnepr",
-				"zzz", 5868, Constants.TOURIST_VISA, Constants.TWENTIES);
-		ForeignPassport foreignPassport2 = new ForeignPassport(Constants.EE, 321, "xxx", "yyy", 1991, 10, 10, "Kiev",
-				"ggg", 2454, Constants.WORK_VISA, Constants.TEN_YEARS);
+		ForeignPassport foreignPassport1 = new ForeignPassport("AE", 123, "xxx", "yyy", 1991, 10, 10, "Dnepr", "zzz",
+				5868, Constants.TOURIST_VISA, Constants.TWENTIES);
+		ForeignPassport foreignPassport2 = new ForeignPassport("EE", 321, "xxx", "yyy", 1991, 10, 10, "Kiev", "ggg",
+				2454, Constants.WORK_VISA, Constants.TEN_YEARS);
 		foreignPassports.add(foreignPassport1);
 		foreignPassports.add(foreignPassport2);
 		printUsersLibrary(foreignPassports);

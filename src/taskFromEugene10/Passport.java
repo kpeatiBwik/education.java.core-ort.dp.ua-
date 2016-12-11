@@ -32,7 +32,6 @@ public class Passport {
 		setBirthday(year, month, day);
 		setCity(city);
 		setIssuedBy(issuedBy);
-		getDateOfIssue();
 	}
 
 	public String getPassportSerie() {

@@ -2,12 +2,6 @@ package taskFromEugene10;
 
 public interface Constants {
 	/**
-	 * Серия паспорта
-	 */
-	final String AE = "AE";
-	final String AH = "AH";
-	final String EE = "EE";
-	/**
 	 * Период на который выдается загран паспорт
 	 */
 	final Integer FIVE_YEARS = 5;
