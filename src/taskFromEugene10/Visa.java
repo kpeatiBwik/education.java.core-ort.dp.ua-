@@ -14,6 +14,14 @@ public class Visa {
 		_endDate = setEndDate(period);
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("тип визы: ").append(_visaType).append("\nвиза действительна от ").append(_startDate).append(" до ")
+				.append(_endDate);
+		return sb.toString();
+	}
+
 	public Visa() {
 
 	};

@@ -1,9 +1,17 @@
 package taskFromEugene10;
 
+import java.util.ArrayList;
+
 public class ForeignPassport extends Passport {
 
 	private int _foreignPassportNumber;
-	private Visa _visa;
+	private ArrayList<Visa> _visas = new ArrayList<Visa>();
+
+	public ForeignPassport(String passwordSeria, int passportNumber, String name, String surName, int year, int month,
+			int day, String city, String issuedBy, int foreignPassportNumber) {
+		super(passwordSeria, passportNumber, name, surName, year, month, day, city, issuedBy);
+		setForeignPassportNumber(foreignPassportNumber);
+	}
 
 	public ForeignPassport(String passwordSeria, int passportNumber, String name, String surName, int year, int month,
 			int day, String city, String issuedBy, int foreignPassportNumber, String visaType, int period) {
@@ -20,12 +28,16 @@ public class ForeignPassport extends Passport {
 		this._foreignPassportNumber = _foreignPassportNumber;
 	}
 
-	public Visa getVisa() {
-		return _visa;
+	public String getVisas() {
+		String vs = "в загрн паспорте ещё нету виз";
+		for (Visa visa : _visas) {
+			vs = visa.toString();
+		}
+		return vs;
 	}
 
 	public void setVisa(String visaType, int period) {
-		_visa = new Visa(visaType, period);
+		_visas.add(new Visa(visaType, period));
 	}
 
 }
