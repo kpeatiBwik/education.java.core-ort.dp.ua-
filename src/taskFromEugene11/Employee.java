@@ -18,6 +18,7 @@ public abstract class Employee {
 	private int _age;
 	private String _department;
 	private String _post;
+	protected double _salary;
 
 	public Employee(String _name, String _surname, int _age, String _department, String _post) {
 		super();
@@ -26,6 +27,7 @@ public abstract class Employee {
 		setAge(_age);
 		setDepartment(_department);
 		setPost(_post);
+		setSalary(_salary);
 	}
 
 	public String getName() {
@@ -72,8 +74,21 @@ public abstract class Employee {
 		this._post = _post;
 	}
 
-	public abstract void salary();
-
 	public abstract void salary(double x);
 
+	public double getSalary() {
+		return _salary;
+	}
+
+	public void setSalary(double _salary) {
+		this._salary = _salary;
+	}
+
+	@Override
+	public String toString() {
+
+		return super.toString();
+	}
+	
+	
 }
