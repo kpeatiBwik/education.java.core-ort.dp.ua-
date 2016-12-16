@@ -2,9 +2,8 @@ package taskFromEugene11;
 
 public class EmployeePaidByTheHour extends Employee {
 
-	public EmployeePaidByTheHour(String _name, String _surname, int _age, String _department, String _post,
-			double _salaryByTheHour) {
-		super(_name, _surname, _age, _department, _post);
+	public EmployeePaidByTheHour(int _id, String _name, double _salaryByTheHour) {
+		super(_name, _id);
 		salary(_salaryByTheHour);
 	}
 

@@ -11,22 +11,14 @@ c) Вывести последние 3 идентификатора работн
 
 public abstract class Employee {
 
-	final int DEFAULT_AGE = 18;
-
 	private String _name;
-	private String _surname;
-	private int _age;
-	private String _department;
-	private String _post;
 	protected double _salary;
+	private int _id;
 
-	public Employee(String _name, String _surname, int _age, String _department, String _post) {
+	public Employee(String _name, int _id) {
 		super();
 		setName(_name);
-		setSurname(_surname);
-		setAge(_age);
-		setDepartment(_department);
-		setPost(_post);
+		setId(_id);
 		setSalary(_salary);
 	}
 
@@ -36,42 +28,6 @@ public abstract class Employee {
 
 	public void setName(String _name) {
 		this._name = _name;
-	}
-
-	public String getSurname() {
-		return _surname;
-	}
-
-	public void setSurname(String _surname) {
-		this._surname = _surname;
-	}
-
-	public int getAge() {
-		return _age;
-	}
-
-	public void setAge(int _age) {
-		if (_age < 18) {
-			this._age = DEFAULT_AGE;
-		} else {
-			this._age = _age;
-		}
-	}
-
-	public String getDepartment() {
-		return _department;
-	}
-
-	public void setDepartment(String _department) {
-		this._department = _department;
-	}
-
-	public String getPost() {
-		return _post;
-	}
-
-	public void setPost(String _post) {
-		this._post = _post;
 	}
 
 	public abstract void salary(double x);
@@ -86,9 +42,18 @@ public abstract class Employee {
 
 	@Override
 	public String toString() {
-
-		return super.toString();
+		StringBuilder sb = new StringBuilder();
+		sb.append("id: ").append(getId()).append("\nимя сотрудника: ").append(getName()).append("\nзарплата: ")
+				.append(getSalary()).append("\n*************************************");
+		return sb.toString();
 	}
-	
-	
+
+	public int getId() {
+		return _id;
+	}
+
+	public void setId(int _id) {
+		this._id = _id;
+	}
+
 }
