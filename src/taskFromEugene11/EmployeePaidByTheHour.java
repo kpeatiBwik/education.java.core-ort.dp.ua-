@@ -8,8 +8,8 @@ public class EmployeePaidByTheHour extends Employee {
 	}
 
 	@Override
-	public void salary(double x) {
-		_salary = 20.8 * 8 * x;
+	public void salary(double salaryPerHour) {
+		_salary = 20.8 * 8 * salaryPerHour;
 	}
 
 }

@@ -30,6 +30,12 @@ public abstract class Employee {
 		this._name = _name;
 	}
 
+	/**
+	 * метод расчета зарплаты
+	 * 
+	 * @param x
+	 *            принимает зарплату, уникальную для каждого типа работника
+	 */
 	public abstract void salary(double x);
 
 	public double getSalary() {
