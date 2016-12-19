@@ -12,4 +12,5 @@ public interface Constants {
 	 */
 	final String TOURIST_VISA = "touristVisa";
 	final String WORK_VISA = "workVisa";
+	final String DEFAULT_VISA = "defaultVisa";
 }

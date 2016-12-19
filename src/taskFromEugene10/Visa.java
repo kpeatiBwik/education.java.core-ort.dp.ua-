@@ -17,7 +17,7 @@ public class Visa {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("тип визы: ").append(_visaType).append("\nвиза действительна от ").append(_startDate).append(" до ")
+		sb.append("\nтип визы: ").append(_visaType).append("виза действительна от ").append(_startDate).append(" до ")
 				.append(_endDate);
 		return sb.toString();
 	}

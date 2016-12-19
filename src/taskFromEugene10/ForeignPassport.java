@@ -1,11 +1,12 @@
 package taskFromEugene10;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ForeignPassport extends Passport {
 
 	private int _foreignPassportNumber;
-	private ArrayList<Visa> _visas = new ArrayList<Visa>();
+	private List<Visa> _visas = new ArrayList<Visa>();
 
 	public ForeignPassport(String passwordSeria, int passportNumber, String name, String surName, int year, int month,
 			int day, String city, String issuedBy, int foreignPassportNumber) {
@@ -29,15 +30,19 @@ public class ForeignPassport extends Passport {
 	}
 
 	public String getVisas() {
-		String vs = "в загрн паспорте ещё нету виз";
-		for (Visa visa : _visas) {
-			vs = visa.toString();
+		String vs = "в загран паспорте ещё нету виз";
+		for (int i = 0; i < _visas.size(); i++) {
+			vs = _visas.toString();
 		}
 		return vs;
 	}
 
 	public void setVisa(String visaType, int period) {
-		_visas.add(new Visa(visaType, period));
+		if (visaType == null) {
+			_visas.add(new Visa(Constants.DEFAULT_VISA, period));
+		} else {
+			_visas.add(new Visa(visaType, period));
+		}
 	}
 
 }

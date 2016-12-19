@@ -1,6 +1,7 @@
 package taskFromEugene10;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CreateForeignPassport {
 
@@ -28,12 +29,13 @@ public class CreateForeignPassport {
 		 * добавление визы
 		 */
 		foreignPassport1.setVisa(Constants.TOURIST_VISA, Constants.TEN_YEARS);
+		foreignPassport1.setVisa(Constants.WORK_VISA, Constants.TWENTIES);
 		foreignPassports.add(foreignPassport1);
 		foreignPassports.add(foreignPassport2);
 		printUsersLibrary(foreignPassports);
 	}
 
-	private static void printUsersLibrary(ArrayList<ForeignPassport> foreignPassports) {
+	private static void printUsersLibrary(List<ForeignPassport> foreignPassports) {
 		for (ForeignPassport userLibrary : foreignPassports) {
 			String foreignPassport = foreignPassportsToString(userLibrary);
 			System.out.print(foreignPassport + "\n");
