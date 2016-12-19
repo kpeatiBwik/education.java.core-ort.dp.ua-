@@ -9,6 +9,10 @@ a) Упорядочить всю последовательность работ
 b) Вывести первые 5 имен работников из полученного в пункте а) списка.
 c) Вывести последние 3 идентификатора работников из полученного в пункте а) списка.*/
 
+/**
+ * Базовый класс для сотрудника
+ * 
+ */
 public abstract class Employee {
 
 	private String _name;
@@ -19,7 +23,6 @@ public abstract class Employee {
 		super();
 		setName(_name);
 		setId(_id);
-		setSalary(_salary);
 	}
 
 	public String getName() {
@@ -31,12 +34,15 @@ public abstract class Employee {
 	}
 
 	/**
-	 * метод расчета зарплаты
+	 * метод расчета зарплаты, записывает данные в поле _salary
+	 * 
+	 * необходимо вызывать при создании сотрудника
 	 * 
 	 * @param x
-	 *            принимает зарплату, уникальную для каждого типа работника
+	 *            принимает уникальную зп для каждого типа работника
+	 * 
 	 */
-	public abstract void salary(double x);
+	public abstract double salary(double uniquSalary);
 
 	public double getSalary() {
 		return _salary;
