@@ -16,7 +16,7 @@ c) Вывести последние 3 идентификатора работн
 public abstract class Employee {
 
 	private String _name;
-	protected double _salary;
+	private double _salary;
 	private int _id;
 
 	public Employee(String _name, int _id) {
@@ -42,13 +42,13 @@ public abstract class Employee {
 	 *            принимает уникальную зп для каждого типа работника
 	 * 
 	 */
-	public abstract double salary(double uniquSalary);
+	public abstract void salary(double uniquSalary);
 
-	public double getSalary() {
+	protected double getSalary() {
 		return _salary;
 	}
 
-	public void setSalary(double _salary) {
+	protected void setSalary(double _salary) {
 		this._salary = _salary;
 	}
 
