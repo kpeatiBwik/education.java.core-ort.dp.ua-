@@ -31,9 +31,7 @@ public class ForeignPassport extends Passport {
 
 	public String getVisas() {
 		String vs = "в загран паспорте ещё нету виз";
-		for (int i = 0; i < _visas.size(); i++) {
-			vs = _visas.toString();
-		}
+		vs = _visas.toString();
 		return vs;
 	}
 
